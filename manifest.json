@@ -12,7 +12,7 @@
         "default_icon": "/icon128.png"
     },
     "content_scripts": [{
-        "js": ["jquery.min.js", /*"run-main.js" "src.js"*/ "content.js"],
+        "js": ["jquery.min.js", "content.js"],
         "matches": ["*://*.khanacademy.org/*"],
         "run_at" : "document_end"
     }], 
@@ -25,8 +25,6 @@
     ],
     "web_accessible_resources": [
         "tabs",
-        "/modg48.png",
-        /*"src.js"*/
         "inject/test.js"
     ]
 }
