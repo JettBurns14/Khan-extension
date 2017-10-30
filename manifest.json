@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "name": "Khan Academy Beta",
+    "short_name": "Khan Academy Beta",
+    "version": "1.6.1",
+    "description": "Khan Academy Extension BETA version. Created by Luke Krikorian and Jett Burns",
+    "browser_action": {
+        "name": "Khan Academy Extension Beta",
+        "icons": [
+            "/icon48.png"
+        ],
+        "default_icon": "/icon128.png"
+    },
+    "content_scripts": [{
+        "js": ["jquery.min.js", /*"run-main.js" "src.js"*/ "content.js"],
+        "matches": ["*://*.khanacademy.org/*"],
+        "run_at" : "document_end"
+    }], 
+    "permissions": [
+        "webRequest",
+        "<all_urls>",
+        "activeTab",
+        "storage", 
+        "management"
+    ],
+    "web_accessible_resources": [
+        "tabs",
+        "/modg48.png",
+        /*"src.js"*/
+        "inject/test.js"
+    ]
+}
